@@ -8,17 +8,16 @@
 body {
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(120deg, #7088a2, #d18a96);
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
 
 /* Container for form */
 .container {
     width: 100%;
-    max-width: 400px; /* Limit max-width for large screens */
+    max-width: 400px;
     padding: 20px;
 }
 
@@ -111,24 +110,26 @@ input[type="Submit"]:hover {
 }
 
 /* Responsive Design */
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
     .center {
-        padding: 30px 20px;
+        width: 90%;
+        padding: 20px;
+    }
+
+    .center h1 {
+        font-size: 22px;
     }
 
     input[type="Submit"] {
         padding: 12px;
         font-size: 16px;
     }
-}
 
-@media screen and (max-width: 480px) {
-    .center {
-        width: 90%;
-        padding: 20px;
+    form .txt_field input {
+        font-size: 14px;
     }
 
-    h1 {
-        font-size: 22px;
+    .txt_field label {
+        font-size: 14px;
     }
 }
