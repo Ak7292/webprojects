@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <title>Home</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <style>
         /* Style for the submit button */
@@ -16,39 +16,40 @@
             font-size: 16px;
             cursor: pointer;
             text-decoration: none; /* Prevent hyperlink styling */
+            width: 100%;
         }
 
         .submit-button:hover {
             background-color: #45a049;
         }
-  </style>
-  <script>
+    </style>
+    <script>
         function openNewPage() {
             window.location.href = "upld.htm"; // Redirect to the new page
         }
-  </script>
-  </head>
-  <body>
+    </script>
+</head>
+<body>
     <div class="container">
-      <div class="center">
-          <h1>Login</h1>
-          <form method="POST" action="">
-              <div class="txt_field">
-                  <input type="email" name="email" required>
-                  <span></span>
-                  <label>Email</label>
-              </div>
-              <div class="txt_field">
-                  <input type="password" name="password" required>
-                  <span></span>
-                  <label>Password</label>
-              </div>
-                 <button class="submit-button" onclick="openNewPage()">Sign in</button>
-              <div class="signup_link">
-                  Haven't an Account ? <a href="index.htm">Register Here</a>
-              </div>
-          </form>
-      </div>
-  </div>
-  </body>
+        <div class="center">
+            <h1>Login</h1>
+            <form method="POST" action="">
+                <div class="txt_field">
+                    <input type="email" name="email" required>
+                    <span></span>
+                    <label>Email</label>
+                </div>
+                <div class="txt_field">
+                    <input type="password" name="password" required>
+                    <span></span>
+                    <label>Password</label>
+                </div>
+                <button class="submit-button" onclick="openNewPage()">Sign in</button>
+                <div class="signup_link">
+                    Haven't an Account? <a href="index.htm">Register Here</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
 </html>
