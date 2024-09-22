@@ -7,34 +7,53 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #f0f4f8;
             margin: 0;
             padding: 0;
         }
         .container {
-            width: 50%;
-            margin: 30px auto;
+            width: 40%;
+            margin: 50px auto;
             background-color: white;
-            padding: 20px;
+            padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
         }
         h1 {
             text-align: center;
             color: #333;
+            margin-bottom: 10px;
+        }
+        p {
+            text-align: center;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            color: #333;
+            display: block;
+            text-align: center; /* Center align the label */
+            margin-bottom: 10px; /* Space between label and input */
         }
         input[type="file"] {
             margin: 20px 0;
             display: block;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
         }
         button {
             background-color: #007bff;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            outline: none;
+            width: 100%;
+            font-size: 16px;
         }
         button:hover {
             background-color: #0056b3;
@@ -48,6 +67,7 @@
 
 <div class="container">
     <h1>Upload Your Resume</h1>
+    <p>Please upload your resume in PDF or Word format.</p>
     <form id="uploadForm" onsubmit="return handleUpload(event);">
         <label for="resumeUpload">Select your resume file:</label>
         <input type="file" id="resumeUpload" name="resumeUpload" accept=".pdf, .doc, .docx" required>
@@ -62,9 +82,9 @@
         // Simulate the upload process (you can integrate actual file handling here)
         const formData = new FormData(event.target);
         
-        // Here you would typically send `formData` to your server.
-        // For now, we simulate the redirect to feedback page:
-        window.location.href = 'fdbk.html';
+        // Simulate a successful upload and redirect
+        alert('Resume uploaded successfully!'); // Notify the user
+        window.location.href = 'fdbk.html'; // Redirect to feedback page
     }
 </script>
 
