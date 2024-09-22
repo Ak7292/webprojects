@@ -34,7 +34,7 @@
             margin-top: 20px;
             color: #555;
         }
-        button {
+        .button {
             display: block;
             margin: 20px auto;
             background-color: #007bff;
@@ -44,8 +44,10 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
+            text-align: center;
+            text-decoration: none;
         }
-        button:hover {
+        .button:hover {
             background-color: #0056b3;
         }
     </style>
@@ -66,14 +68,9 @@
             <li>Tailor your resume for specific job roles.</li>
         </ul>
     </div>
-    <button onclick="goBack()">Go Back</button>
+    <a href="upld.htm" class="button">Go Back</a>
+    <a href="index.htm" class="button">Logout</a> <!-- Redirect to start index page -->
 </div>
-
-<script>
-    function goBack() {
-        window.location.href = "upld.htm"; // Redirect back to upload page
-    }
-</script>
 
 </body>
 </html>
