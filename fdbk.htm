@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: 30px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .loader {
+            border: 6px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 6px solid #3498db;
+            width: 40px;
+            height: 40px;
+            animation: spin 2s linear infinite;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .feedback {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f0f8ff;
+            display: none;
+        }
+        .score {
+            color: #007bff;
+            font-weight: bold;
+        }
+        .suggestions {
+            color: #ff6347;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Analyzing Your Resume</h1>
+
+    <div class="loader" id="loader"></div>
+    <p style="text-align: center;" id="loadingText">Please wait while we analyze your resume...</p>
+
+    <div class="feedback" id="feedbackSection">
+        <p>Your resume score is: <span class="score" id="resumeScore"></span></p>
+        <p>Suggestions for improvement:</p>
+        <ul class="suggestions" id="improvementSuggestions"></ul>
+    </div>
+</div>
+
+<script>
+    // Simulate fetching the resume from the "upld.html"
+    const resumeText = "Sample resume text with Experience, Education, and Skills sections.";
+
+    // Simulate a delay to represent the resume analysis process
+    function analyzeResume() {
+        let score = 0;
+        let suggestions = [];
+
+        if (resumeText.length < 200) {
+            score = 50;
+            suggestions.push("Your resume seems too short. Consider adding more content.");
+        } else if (resumeText.length > 1000) {
+            score = 80;
+            suggestions.push("Your resume is a bit lengthy. Consider summarizing it.");
+        } else {
+            score = 90;
+        }
+
+        if (!resumeText.includes("Experience")) {
+            suggestions.push("Include a dedicated 'Experience' section in your resume.");
+        }
+
+        if (!resumeText.includes("Skills")) {
+            suggestions.push("Add a 'Skills' section to highlight your key abilities.");
+        }
+
+        // Display the feedback
+        document.getElementById('resumeScore').innerText = score;
+        let suggestionsList = document.getElementById('improvementSuggestions');
+        suggestionsList.innerHTML = '';
+
+        if (suggestions.length === 0) {
+            suggestions.push("Your resume looks great! Keep it up.");
+        }
+
+        suggestions.forEach(suggestion => {
+            let li = document.createElement('li');
+            li.textContent = suggestion;
+            suggestionsList.appendChild(li);
+        });
+
+        // Hide loader and show feedback
+        document.getElementById('loader').style.display = 'none';
+        document.getElementById('loadingText').style.display = 'none';
+        document.getElementById('feedbackSection').style.display = 'block';
+    }
+
+    // Simulate the delay for resume analysis
+    setTimeout(analyzeResume, 3000);  // Simulates a 3-second analysis
+</script>
+
+</body>
+</html>
