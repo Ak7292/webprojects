@@ -78,13 +78,15 @@
 <script>
     function handleUpload(event) {
         event.preventDefault(); // Prevent form submission
-        
+
         // Simulate the upload process (you can integrate actual file handling here)
         const formData = new FormData(event.target);
-        
+
         // Simulate a successful upload and redirect
-        alert('Resume uploaded successfully!'); // Notify the user
-        window.location.href = 'fdbk.htm'; // Redirect to feedback page
+        setTimeout(() => {
+            alert('Resume uploaded successfully!'); // Notify the user
+            window.location.href = 'fdbk.html'; // Redirect to feedback page
+        }, 1000); // Delay for 1 second to simulate processing
     }
 </script>
 
