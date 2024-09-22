@@ -1,3 +1,5 @@
+/*lg styling*/
+
 body{
     margin: 0;
     padding: 0;
@@ -77,6 +79,7 @@ body{
   .txt_field input:Valid ~ span::before{
     width: 100%;
   }
+
   
   .pass{
     margin: -5px 0 20px 5px;
@@ -125,3 +128,74 @@ body{
     width: 100vw;
     height: 25vh;
   }
+
+
+/*upld styling*/
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for the upload form */
+.upload-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Title styling */
+.upload-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Label and input styling */
+label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="file"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    display: block;
+    width: 100%;
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+/* Upload button styling */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
