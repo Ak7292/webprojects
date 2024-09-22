@@ -5,6 +5,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="style.css" />
+    <style>
+        /* Style for the submit button */
+        .submit-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none; /* Prevent hyperlink styling */
+        }
+
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+  </style>
+  <script>
+        function openNewPage() {
+            window.location.href = "upld.htm"; // Redirect to the new page
+        }
+  </script>
   </head>
   <body>
     <div class="container">
@@ -21,7 +43,7 @@
                   <span></span>
                   <label>Password</label>
               </div>
-              <input name="submit" type="Submit" value="Sign in">
+                 <button class="submit-button" onclick="openNewPage()">Sign in</button>
               <div class="signup_link">
                   Haven't an Account ? <a href="index.htm">Register Here</a>
               </div>
