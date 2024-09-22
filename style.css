@@ -1,4 +1,4 @@
-/* Basic reset */
+/* lg styling */
 * {
     margin: 0;
     padding: 0;
@@ -130,6 +130,96 @@ form {
     }
 
     .txt_field label {
+        font-size: 14px;
+    }
+}
+
+
+/* upld styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container for the upload form */
+.upload-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Title styling */
+.upload-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Label and input styling */
+label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+input[type="file"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    display: block;
+    width: 100%;
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Upload button styling */
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 600px) {
+    .upload-container {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    label {
         font-size: 14px;
     }
 }
