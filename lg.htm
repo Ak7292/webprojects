@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* Style for the submit button */
+        .submit-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none; /* Prevent hyperlink styling */
+            width: 100%;
+        }
+
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+        
+        /* Error message style */
+        .error-message {
+            color: red;
+            font-size: 14px;
+            display: none; /* Hidden by default */
+        }
+    </style>
+    <script>
+        function validateLogin(event) {
+            event.preventDefault(); // Prevent form from submitting immediately
+
+            // Get form values
+            var email = document.querySelector('input[name="email"]').value;
+            var password = document.querySelector('input[name="password"]').value;
+            var errorMessage = document.getElementById('error-message');
+
+            // Basic validation for empty fields
+            if (email === "" || password === "") {
+                errorMessage.style.display = 'block';
+                errorMessage.innerText = "Email and Password are required!";
+                return false;
+            }
+
+            // Email format validation (simple regex for example purposes)
+            var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+            if (!emailPattern.test(email)) {
+                errorMessage.style.display = 'block';
+                errorMessage.innerText = "Please enter a valid email address!";
+                return false;
+            }
+
+            // If validation passes, proceed to next page
+            window.location.href = "upld.htm"; // Redirect to the new page
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="center">
+            <h1>Login</h1>
+            <form id="login-form" method="POST" onsubmit="validateLogin(event)">
+                <div class="txt_field">
+                    <input type="email" name="email" required>
+                    <span></span>
+                    <label>Email</label>
+                </div>
+                <div class="txt_field">
+                    <input type="password" name="password" required>
+                    <span></span>
+                    <label>Password</label>
+                </div>
+                <!-- Error message container -->
+                <div id="error-message" class="error-message"></div>
+
+                <button class="submit-button" type="submit">Sign in</button>
+
+                <div class="signup_link">
+                    Haven't an Account? <a href="index.htm">Register Here</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

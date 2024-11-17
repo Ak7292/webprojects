@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f8;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 40%;
+            margin: 50px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .feedback {
+            margin: 20px 0;
+        }
+        .score {
+            font-weight: bold;
+            color: #007bff;
+        }
+        .suggestions {
+            margin-top: 20px;
+            color: #555;
+        }
+        .button {
+            display: block;
+            margin: 20px auto;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Resume Feedback</h1>
+    <div class="feedback">
+        <p>Your resume has been analyzed!</p>
+        <p class="score">Score: 85/100</p>
+    </div>
+    <div class="suggestions">
+        <h3>Improvement Suggestions:</h3>
+        <ul>
+            <li>Include more quantifiable achievements.</li>
+            <li>Use a clearer layout for better readability.</li>
+            <li>Tailor your resume for specific job roles.</li>
+        </ul>
+    </div>
+    <a href="upld.htm" class="button">Go Back</a>
+    <a href="index.htm" class="button">Logout</a> <!-- Redirect to start index page -->
+</div>
+
+</body>
+</html>
